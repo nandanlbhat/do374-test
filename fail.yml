@@ -1,9 +1,0 @@
----
-- name: fail with a message
-  hosts: all
-  gather_facts: false
-  tasks:
-    - name: fail with a message
-      fail:
-        msg: task failed successfully
-...
