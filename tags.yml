@@ -1,0 +1,33 @@
+---
+- name: try tags
+  hosts: servera.lab.example.com
+  gather_facts: true
+  tasks:
+    - name: task 1
+      debug:
+        msg: task 1
+      tags:
+        - task1
+        - never
+
+    - name: task 2
+      debug:
+        msg: task 2
+      tags:
+        - task2
+        - never
+
+    - name: task 3
+      debug:
+        msg: task 3
+      tags:
+        - task3
+        - never
+
+    - name: task 4
+      debug:
+        msg: task 4
+      tags:
+        - task4
+        - always
+...

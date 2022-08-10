@@ -1,7 +1,7 @@
 ---
 - name: inspect task ordering
   hosts: servera.lab.example.com
-  gather_facts: false
+  gather_facts: true
 
   pre_tasks:
     - name: this is a pre_task
@@ -29,8 +29,10 @@
     - name: this is a post_task
       debug:
         msg: this is a post_task
-      notify: post_task_handler
-      changed_when: true
+      notify: 
+        - post_task_handler
+        - special_handler
+      #changed_when: true
 
 
 
@@ -40,11 +42,16 @@
         msg: this is a pre_task_handler
 
     - name: task_handler
-      debug:
-        msg: this is a task_handler
+      command: id
+      become: true
+      register: id_out
 
     - name: post_task_handler
       debug:
         msg: this is a post_task_handler
 
+    - name: special_handler
+      debug:
+        var: id_out
+      listen: task_handler
 ...

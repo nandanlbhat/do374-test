@@ -1,0 +1,639 @@
+    1  watch -d -n0.5 podman ps
+    2  watch  -n0.5 podman ps
+    3  podman images
+    4  podman run -it hub.lab.example.com/ee-supported-rhel8:2.0.1 bash
+    5  ls
+    6  cat prompt.yml 
+    7  podman ps
+    8  podman inspect ansible_runner_5c3dd100-cf5c-4abf-9eba-ea04b371398f
+    9  podman inspect ansible_runner_5c3dd100-cf5c-4abf-9eba-ea04b371398f | less
+   10  podman ps
+   11  podman rm -f 0c86e155f1cc
+   12  podman ps
+   13  ansible-navigator config
+   14  ls
+   15  ansible-navigator log --help
+   16  ansible-navigator  --help
+   17  cd ..
+   18  git clone https://github.com/nandanlbhat/do374-test.git
+   19  vi github-token.txt
+   20  cat github-token.txt
+   21  cd do374-test/
+   22  git status
+   23  cp ../Downloads/playbooks-related/ansible.cfg .
+   24  cp -vr ../Downloads/playbooks-related/inventory .
+   25  cp -vr ../Downloads/playbooks-related/ping.yml .
+   26  ls
+   27  git status
+   28  git add ansible.cfg 
+   29  git status
+   30  git add .
+   31  git status
+   32  ls -a
+   33  ls -a .it
+   34  ls -a .git/
+   35  git commit -m 'initial files in ansible repo'
+   36  git config --global --edit
+   37  git config --global push.default simple
+   38  echo $[ 4 * 24 * 60 * 60 ]
+   39  git config --global credential.helper cache --timeout 345600
+   40  git config --global credential.helper cache 
+   41  git config --global credential.helper "cache --timeout 345600"
+   42  git status
+   43  git push
+   44  git checkout -b test123
+   45  git status
+   46  git push --set-upstream origin test123
+   47  vi fail.yml
+   48  vi ~/.vimrc
+   49  vi fail.yml
+   50  git status
+   51  git add fail.yml 
+   52  git status
+   53  git commit -m 'trying the fail playbook'
+   54  git status
+   55  git push
+   56  ls
+   57  git checkout master
+   58  git checkout main 
+   59  ls
+   60  git checkout test123 
+   61  ls
+   62  man git-merge
+   63  git checkout test123
+   64  git checkout main
+   65  git merge test123
+   66  git status
+   67  ls
+   68  git push
+   69  git log
+   70  man git-revert
+   71  git revert 0f6035744ce5766a4ba0778ba8052b9e30edddf3
+   72  ls
+   73  git branches
+   74  git branc
+   75  git branch 
+   76  git checkout test123
+   77  ls
+   78  git checkout main
+   79  ls
+   80  git merge test123
+   81  git status
+   82  git log
+   83  man git-revert
+   84  man git-restore
+   85  man git-revert
+   86  git revert 31b455679092755d29e632c8d908ae35f279d08e
+   87  ls
+   88  git checkout test123
+   89  ls
+   90  cp ansible.cfg fail.yml  inventory ping.yml /tmp -vr 
+   91  git checkout main
+   92  cp -vr /tmp/ansible.cfg /tmp/ping.yml /tmp/inventory /tmp/inventory .
+   93  git add .
+   94  git status
+   95  git commit -m 'recovering from a failed revert command'
+   96  cp -v /tmp/fail.yml .
+   97  git commit -m 'added fail playbook also'
+   98  git add fail.yml 
+   99  git commit -m 'added fail playbook also, again'
+  100  git push
+  101  cd ../Downloads/playbooks-related/
+  102  ls
+  103  git init
+  104  git status
+  105  git add *yml *cfg inventory
+  106  git status
+  107  git add filters.yaml 
+  108  ls
+  109  ls -a
+  110  rm -rf .git
+  111  ls -a
+  112  git status
+  113  git init --bare
+  114  ls
+  115  rm -rf branches config description HEAD hooks info objects refs 
+  116  git init
+  117  ls -a
+  118  ls
+  119  git status
+  120  git add .
+  121  git status
+  122  git rm '*-artifact-*'
+  123  git status
+  124  git rm -f '*-artifact-*'
+  125  git status
+  126  ls
+  127  git status
+  128  rm filters.yml 
+  129  mv filters.yaml filters.yml
+  130  git status
+  131  git ad .
+  132  git add .
+  133  git status
+  134  git reset
+  135  git status
+  136  cd -
+  137  ls
+  138  it status
+  139  git status
+  140  ansible-navigator run ping.yml 
+  141  ls
+  142  git status
+  143  vi .gitignore
+  144  git status
+  145  git add .gitignore
+  146  git commit -m 'ignoring logs and artifacts'
+  147  git push
+  148  vi fail.yml 
+  149  ansible-navigator run fail.yml 
+  150  ansible-navigator run fail.yml -m stdout
+  151  cat fi
+  152  cat fail
+  153  cat fail.yml 
+  154  ls
+  155  cp /usr/share/applications/org.gnome.Terminal.desktop Desktop/
+  156  vi .vimrc
+  157  cat .vimrc 
+  158  mkdir test
+  159  rmdir test
+  160  ansible-doc -l | wc -l
+  161  ansible --version
+  162  sudo dnf install chromium
+  163  sudo dnf install Downloads/google-chrome-stable_current_x86_64.rpm 
+  164  ansible-doc
+  165  ansible-doc -l
+  166  ansible-doc add_host
+  167  ansible-doc -l
+  168  ansible-doc file
+  169  ansible-galaxy collection list
+  170  ansible-doc -l
+  171  find /usr/ -iname '*apt_repository*'
+  172  rpm -qf /usr/lib/python3.8/site-packages/ansible/modules/__pycache__/apt_repository.cpython-38.pyc
+  173  yum install ansible-navigator
+  174  sudo yum install ansible-navigator
+  175  ansible-navigator 
+  176  podman login hub.lab.example.com
+  177  podman search hub.lab.example.com/
+  178  podman pull  hub.lab.example.com/ee-supported-rhel8:2.0.0
+  179  podman search utility.lab.example.com
+  180  podman pull hub.lab.example.com/ee-supported-rhel8:latest
+  181  podman rmi hub.lab.example.com/ee-supported-rhel8:latest
+  182  podman images
+  183  podman pull  hub.lab.example.com/ee-supported-rhel8:2.0.1
+  184  ansible-navigator 
+  185  podman images
+  186  ansible-navigator --help
+  187  podman images
+  188  ansible-navigator --eei hub.lab.example.com/ee-supported-rhel8:2.0.1
+  189  ls
+  190  ls Downloads/
+  191  cd Downloads/playbooks-related/
+  192  ls
+  193  mv ansible-navigator.yml ansible-navigator.yml.old
+  194  mv ansible.cfg ansible.cfg.old
+  195  vi ansible.cfg
+  196  mkdir inventory
+  197  vi inventory/hosts
+  198  ansible-navigator inventory --list --yaml
+  199  ansible-navigator inventory -i inventory/hosts --list --yaml
+  200  ansible-navigator inventory -i inventory/hosts --list --yaml --eei hub.lab.example.com/ee-supported-rhel8:2.0.1
+  201  ansible-inventory --list --yaml
+  202  ansible all --list-hosts
+  203  ansible-navigator run ping.yml --eei hub.lab.example.com/ee-supported-rhel8:2.0.1
+  204  ansible-navigator inventory -i inventory/hosts  --eei hub.lab.example.com/ee-supported-rhel8:2.0.1
+  205  podman login registry.redhat.io
+  206  ansible-navigator
+  207  podman logout registry.redhat.io
+  208  ansible-navigator
+  209  ansible-navigator inventory -i inventory/hosts 
+  210  ansible-navigator
+  211  vi ping.yml 
+  212  ansible-navigator
+  213  ansible-navigator run ping.yml -i inventory
+  214  ansible-playbook ping.yml 
+  215  ansible-navigator run ping.yml -i inventory -m stdout
+  216  ansible-navigator --help | less
+  217  ls
+  218  ansible-navigator run ping.yml -i inventory
+  219  ls
+  220  ansible-navigator 
+  221  ansible-navigator replay 'ping-artifact-2022-08-08T07:23:15.504478+00:00.json'
+  222  cat forks.yml 
+  223  ansible-navigator run forks.yml 
+  224  ls
+  225  ansible-navigator replay 'forks-artifact-2022-08-08T07:25:57.608796+00:00.json'
+  226  echo rm -f '*-artifact-*'
+  227  echo rm -f "*-artifact-*"
+  228  echo rm -f *-artifact-*
+  229   rm -f *-artifact-*
+  230  ls
+  231  ansible-playbook forks.yml 
+  232  ls
+  233  ansible-navigator run forks.yml 
+  234  ls
+  235  ansible-navigator replay forks-artifact-2022-08-08T07\:29\:21.237881+00\:00.json -m stdout
+  236  ansible-navigator
+  237  ansible-navigator images
+  238  ansible-navigator 
+  239  ansible-navigator --help | less
+  240  ansible-navigator collections --ee false
+  241  ansible-navigator 
+  242  ansible-navigator --help
+  243  ansible all -m ping
+  244  ansible-navigator run forks.yml 
+  245  ansible-navigator run prompt.yml 
+  246  ls
+  247  cd do374-test/
+  248  ls
+  249  cp -v ../Downloads/playbooks-related/prompt.yml .
+  250  ls
+  251  cd do374-test/
+  252  ansible-navigator run prompt.yml 
+  253  podman ps
+  254  ansible-doc -l | wc -
+  255  ansible-doc -l | wc -l
+  256  ansible-navigator collections --eei ee-supported-rhel8
+  257  ansible-navigator config --eei ee-supported-rhel8
+  258  ls
+  259  ls ~/.ansible.cfg
+  260  cp -v ansible.cfg ~/.ansible.cfg
+  261  vi ~/.ansible.cfg 
+  262  ansible-navigator config --eei ee-supported-rhel8
+  263  cd /tmp/
+  264  ls
+  265  cat ansible.cfg 
+  266  ansible-navigator config --eei ee-supported-rhel8
+  267  cd /var/tmp/
+  268  ls
+  269  ansible-navigator config --eei ee-supported-rhel8
+  270  vi ~/.ansible.cfg 
+  271  ansible-navigator config --eei ee-supported-rhel8
+  272  rm ~/.ansible.cfg 
+  273  ANSIBLE_FORKS=15 ansible-navigator config --eei ee-supported-rhel8
+  274  cp ~/do374-test/ansible.cfg a.cfg
+  275  ANSIBLE_CONFIG=/var/tmp/a.cfg  ansible-navigator config --eei ee-supported-rhel8
+  276  ls
+  277  cd ~/do374-test/
+  278  ls
+  279  ansible-navigator config --eei ee-supported-rhel8
+  280  ansible-config dump
+  281  reset
+  282  podman images
+  283  ansible-navigator config --eei ee-supported-rhel8-m stdout dump
+  284  ansible-navigator config --eei ee-supported-rhel8 -m stdout dump
+  285  ls
+  286  ansible-navigator config --eei ee-supported-rhel8 
+  287  vi ansible.cfg 
+  288  ansible-navigator config --eei ee-supported-rhel8 
+  289  vi ansible.cfg 
+  290  podman ps
+  291  podman exec -it ansible_runner_7f4427eb-ac8f-4e46-a825-7f74be3b5ee6 bash
+  292  ps ax | less
+  293  podman images
+  294  podman pull hub.lab.example.com/ee-minimal-rhel8:latest
+  295  podman login hub.lab.example.com -u admin
+  296  podman pull hub.lab.example.com/ee-minimal-rhel8:latest
+  297  podman search ee-29-rhel8
+  298  podman search hub.lab.example.com/ee-29-rhel8
+  299  podman pull hub.lab.example.com/ee-29-rhel8:latest
+  300  ansible-navigator collections --eei ee-supported-rhel8
+  301  ansible-navigator collections --eei ee-minimal-rhel8
+  302  ansible-navigator collections --eei ee-29-rhel8
+  303  ansible-navigator collections --eei ee-supported-rhel8
+  304  ansible-navigator doc -l --eei ee-supported-rhel8
+  305  ansible-navigator doc -l  --eei ee-supported-rhel8  -m stdout
+  306  ansible-navigator doc ansible.netcommon.net_ping  --eei ee-supported-rhel8  -m stdout
+  307  ansible-galaxy collection list
+  308  cd do374-test/
+  309  ls
+  310  mkdir -p collections/ansible_collections
+  311  cd collections/ansible_collections
+  312  ansible-galaxy collection install ansible.posix
+  313  ls
+  314  rm -rf /home/student/.ansible/collections/ansible_collections/ansible
+  315  ansible-galaxy collection install ansible.posix -p .
+  316  cd ..
+  317  ls /home/student/do374-test/collections/ansible_collections/ansible/posix
+  318  cd collections/ansible_collections/
+  319  ls
+  320  cd ansible/
+  321  ls
+  322  cd posix/
+  323  ls
+  324  pwd
+  325  ls plugins/
+  326  ls plugins/module
+  327  ls plugins/modules
+  328  cd ../../.././
+  329  cd ..
+  330  treee collections/
+  331  tree collections/
+  332  an tree
+  333  man tree
+  334  tree -L 1collections/
+  335  tree -L 2 collections/ 
+  336  tree -L 3 collections/ 
+  337  tree -L 4 collections/ 
+  338  vi firewall.yml
+  339  ansible-navigator run firewall.yml --eei ee-minimal-rhel8 -m stdout
+  340  vi firewall.yml 
+  341  ansible-navigator run firewall.yml --eei ee-minimal-rhel8 -m stdout
+  342  ansible-playbook firewall.yml 
+  343  rm -rf collections/ansible_collections/ansible/
+  344  ansible-playbook firewall.yml 
+  345  ansible-navigator run firewall.yml --eei ee-minimal-rhel8 -m stdout
+  346  ansible-galaxy collection install ansible.posix -p collections/ansible_collections/
+  347  vi ansible.cfg 
+  348  rm -rf collections/ansible_collections/ansible/
+  349  ls collections/ansible_collections/
+  350  ansible-galaxy collection install ansible.posix -p collections/ansible_collections/
+  351  vi ansible.cfg 
+  352  ansible --verison
+  353  ansible --version
+  354  cat ansible.cfg 
+  355  vi ansible.cfg 
+  356  rm -rf collections/ansible_collections/ansible/
+  357  ansible-galaxy collection install ansible.posix -p collections/ansible_collections/
+  358  cat ansible.cfg 
+  359  echo 28d93d000e25e4a4a6b082d97e09ea3116f7cc42 >> ~/hub-token.txt
+  360  vi ansible.cfg 
+  361  ansible-galaxy collection list
+  362  cd
+  363  lab start manage-finding
+  364  ls
+  365  cd manage-finding/
+  366  ls
+  367  cat ansible.cfg 
+  368  ls
+  369  cat ansible.cfg 
+  370  vi ansible.cfg 
+  371  cat ~/hub-token.txt 
+  372  vi ansible.cfg 
+  373  mkdir collections
+  374  ansible-galaxy collection install ansible.netcommon -p collections/
+  375  ansible-galaxy collection list
+  376  vi ansible.cfg 
+  377  ansible-galaxy collection list
+  378  ansible-galaxy collection install  -p collections/ redhat.rhv:1.4.1
+  379  ansible-galaxy collection list
+  380  rm -rf collections/ansible_collections/*
+  381  vi collections/requirements.yml
+  382  ansible-galaxy collection install  -p collections/ -r collections/requirements.yml 
+  383  rm -rf collections/ansible_collections/*
+  384  ansible-galaxy collection list
+  385  ansible-galaxy collection install  -p collections/ -r collections/requirements.yml 
+  386  ansible-galaxy collection list
+  387  lab finish manage-finding
+  388  ansible-navigator doc -l --eei ee-29-rhel8 -m stdout
+  389  ansible-navigator doc -l --eei ee-29-rhel8 -m stdout | wc -l
+  390  ansible-navigator doc -l --eei ee-29-rhel8 -m stdout 
+  391  podman login registry.redhat.io
+  392  podman search registry.redhat.io/ee
+  393  ansible-navigator images
+  394  podman pull registry.redhat.io/rhscl/httpd-24-rhel7
+  395  ansible-navigator images
+  396  ansible-doc debug
+  397  ssh servera.lab.example.com
+  398  ssh -i ~/.ssh/lab_rsa devops@servera
+  399  cat ~/.ssh/lab_rsa
+  400  ls ~
+  401  cat ~/github-token.txt 
+  402  cd
+  403  cd do374-test/
+  404  cat inventory/hosts 
+  405  ls
+  406  cat ping
+  407  cat ping.yml 
+  408  cat ~/.ssh/gitlab_rsa
+  409  ssh root@controller
+  410  vi ansible-navigator.yml
+  411  podman images
+  412  vi ansible-navigator.yml
+  413  podman rmi -af
+  414  podman ps -a
+  415  podman images
+  416  ansible-navigator 
+  417  vi ansible-navigator.yml 
+  418  ansible-navigator 
+  419  podman images
+  420  ansible-navigator run ping.yml 
+  421  grep -v '#' ansible-navigator.yml 
+  422  podman images
+  423  vi ansible-navigator.yml 
+  424  ansible-navigator run prompt.yml 
+  425  vi prompt.yml 
+  426  ansible-navigator run prompt.yml 
+  427  ansible-navigator 
+  428  ansible-navigator -m interactive
+  429  vi ansible-navigator.yml 
+  430  ansible-navigator config
+  431  ansible-navigator config dump
+  432  grep -v '#' ansible-navigator.yml 
+  433  ansible-navigator doc -m stdout -t inventory --list
+  434  cd do374-test/
+  435  ansible-navigator doc -m stdout -t inventory --list
+  436  ansible-navigator doc -l
+  437  ansible-navigator doc kubernetes.core.k8s
+  438  ls inventory/
+  439  vi inventory/hosts 
+  440  ansible-navigator inventory -i inventory/hosts --graph myservers
+  441  ansible-navigator inventory -i inventory/hosts --mode stdout --list
+  442  cat inventory/hosts 
+  443  ansible-navigator inventory -i inventory/hosts --mode stdout --list
+  444  ansible-navigator inventory -i inventory/hosts --mode stdout --list --yaml
+  445  cat inventory/hosts 
+  446  vi inventory/hosts 
+  447  ansible-navigator inventory -i inventory/hosts --mode stdout --list --yaml
+  448  ansible-navigator inventory -i inventory/hosts --mode stdout --list --yaml >> inventory/inventory.ym;
+  449  ansible-navigator inventory -i inventory/hosts --mode stdout --list --yaml >> inventory/inventory.yml
+  450  vi inventory/inventory.yml
+  451  ansible-navigator inventory -i inventory/inventory.yml --mode stdout --list 
+  452  vi inventory/inventory.yml
+  453  ansible-navigator inventory -i inventory/inventory.yml --mode stdout --list 
+  454  cat inventory/inventory.ym
+  455  rm inventory/inventory.ym
+  456  cat inventory/inventory.yml 
+  457  # ansible-navigator inventory -i inventory/inventory.yml --mode stdout --list --yaml
+  458  cd
+  459  echo date
+  460  date
+  461  lab start inventory-yaml 
+  462  cd inventory-yaml/
+  463  ls
+  464  ansible-navigator inventory -i inventory -m stdout --list --yaml 
+  465  ansible-navigator inventory -i inventory -m stdout --list --yaml >> inventory.yml
+  466  ansible-navigator run -i inventory.yml test-ping-all-servers.yml 
+  467  ansible-navigator run test-ping-all-servers.yml  -i inventory.yml 
+  468  ansible-navigator run test-ping-all-servers.yml  -i inventory.yml -m stdout
+  469  date
+  470  cd
+  471  cd do374-test/
+  472  ls
+  473  cd
+  474  cd inventory-yaml/
+  475  ls
+  476  cat ansible-navigator.yml 
+  477  cd
+  478  cd do374-test/
+  479  ls
+  480  vi vars.yml
+  481  mkdir roles
+  482  cd roles/
+  483  mkdir myrole/tasks -p
+  484  vi myrole/tasks/main.yml
+  485  mkdir myrole/defaults -p
+  486  vi myrole/defaults/main.yml
+  487  cd ..
+  488  vi vars.yml 
+  489  ansible-navigator run vars.yml --syntax-check
+  490  ansible-navigator run vars.yml 
+  491  ls
+  492  cat ansible.cfg 
+  493  ls inventory/
+  494  cat inventory/hosts 
+  495  cat inventory/inventory.yml 
+  496  mv inventory/inventory.yml .
+  497  ls
+  498  ls inventory
+  499  vi inventory/hosts 
+  500  vi vars.yml 
+  501  ansible-navigator run vars.yml --syntax-check
+  502  ansible-navigator run vars.yml
+  503  cat roles/myrole/defaults/main.yml 
+  504  cat inventory/hosts 
+  505  mkdir inventory/group_vars/myservers -p
+  506  vi inventory/group_vars/myservers/a.yml
+  507  ansible-navigator run vars.yml
+  508  cat inventory/hosts 
+  509  cp -vr inventory/group_vars .
+  510  ls
+  511  vi group_vars/myservers/a.yml 
+  512  ansible-navigator run vars.yml
+  513  vi vars.yml 
+  514  ansible-navigator run vars.yml --syntax-check
+  515  ansible-navigator run vars.yml
+  516  mkdir roles/myrole/vars/ -p
+  517  vi roles/myrole/vars/main.yml
+  518  ansible-navigator run vars.yml
+  519  ansible-navigator run vars.yml -e "myvar=cli"
+  520  git status
+  521  git add .
+  522  git commit -m 'made some changes'
+  523  git push
+  524  vi ansible.cfg 
+  525  cp ../Downloads/playbooks-related/id.yml .
+  526  cat id.yml 
+  527  vi id.yml 
+  528  ansible-navigator run id.yml 
+  529  vi id.yml 
+  530  ansible-navigator run id.yml 
+  531  vi ansible.cfg 
+  532  ansible-navigator run id.yml 
+  533  vi ansible.cfg 
+  534  vi id.yml 
+  535  ansible-navigator run id.yml 
+  536  wq
+  537  vi id.yml 
+  538  ansible-navigator run id.yml 
+  539  cat id.yml 
+  540  vi ansible.cfg 
+  541  vi id.yml 
+  542  ansible-navigator run id.yml 
+  543  vi id.yml 
+  544  ansible-navigator run id.yml 
+  545  ansible-navigator run id.yml -b false
+  546  ansible-navigator run id.yml -b 
+  547  vi id.yml 
+  548  cat ansible.cfg 
+  549  vi ansible.cfg
+  550  ansible-navigator run id.yml -b 
+  551  ansible-navigator run id.yml 
+  552  vi id.yml 
+  553  vi ~/.vimrc 
+  554  vi id.yml 
+  555  ansible-navigator run id.yml --syntax-check
+  556  ansible-navigator run id.yml
+  557  cat id.yml 
+  558  vi id.yml 
+  559  ansible-navigator run id.yml --syntax-check
+  560  ls ../Downloads/playbooks-related
+  561  vi order.yml
+  562  vi roles/myrole/tasks/main.yml 
+  563  mkdir -p roles/myrole/handlers
+  564  vi roles/myrole/handlers/main.yml
+  565  vi order.yml 
+  566  ansible-navigator run order.yml --syntax-check
+  567  vi order.yml 
+  568  ansible-navigator run order.yml --syntax-check
+  569  ansible-navigator run order.yml
+  570  vi order.yml 
+  571  ansible-navigator run order.yml --syntax-check
+  572  ansible-navigator run order.yml
+  573  vi order.yml 
+  574  ansible-navigator run order.yml --syntax-check
+  575  ansible-navigator run order.yml 
+  576  cat order.yml 
+  577  vi order.yml 
+  578  git add order.yml 
+  579  git status
+  580  git add .
+  581  git commit -m 'trying task ordering'
+  582  git push
+  583  vi order.yml 
+  584  ansible-navigator run order.yml --syntax-check
+  585  ansible-navigator run order.yml 
+  586  cat order.yml 
+  587  vi order.yml 
+  588  ansible-navigator run order.yml 
+  589  cat order.yml 
+  590  vi order.yml 
+  591  ansible-navigator run order.yml --syntax-check
+  592  ansible-navigator run order.yml
+  593  cat order.yml 
+  594  ls ../Downloads/playbooks-related
+  595  cp ../Downloads/playbooks-related/tags.yml .
+  596  cp ../Downloads/playbooks-related/tags2.yml .
+  597  cat tags.yml 
+  598  cat tags2.yml 
+  599  rm tags2.yml 
+  600  less tags.yml 
+  601  vi tags.yml 
+  602  ansible-navigator run tags.yml --syntax-check
+  603  ansible-navigator run tags.yml --tags task1
+  604  ansible-navigator run tags.yml --tags task2
+  605  ansible-navigator run tags.yml --tags task2,task1
+  606  ansible-navigator run tags.yml
+  607  vi tags.yml 
+  608  ansible-navigator run tags.yml --tags task1
+  609  ansible-navigator run tags.yml --tags task2,task1
+  610  vi tags.yml 
+  611  ansible-navigator run tags.yml
+  612  vi tags.yml 
+  613  ansible-navigator run tags.yml
+  614  ansible-navigator run tags.yml --tags task1
+  615  cat tags.yml 
+  616  vi tags.yml 
+  617  ansible-navigator run tags.yml --tags task1
+  618  vi ansible.cfg 
+  619  ansible-navigator config -m interactive
+  620  vi ansible.cfg 
+  621  ansible-navigator run tags.yml --tags task1
+  622  vi tags.yml 
+  623  ansible-navigator run tags.yml --tags task1
+  624  sudo systemctl status chronyd crond atd
+  625  ansible-navigator doc -l
+  626  ansible-navigator doc systemd
+  627  sudo visudo
+  628  ssh servera sudo ls /root
+  629  ssh -i ~/.ssh/lab_rsa devops@servera sudo ls /root
+  630  vi ansible.cfg 
+  631  ansible-navigator run tags.yml --tags task1
+  632  ansible-navigator run order.yml --tags task1
+  633  ansible-navigator run order.yml
+  634  vi ansible.cfg 
+  635  ansible-navigator run order.yml
+  636  vi ansible.cfg 
+  637  vi order.yml
+  638  ansible-navigator run order.yml
+  639  history > history-2022-09-10.txt
