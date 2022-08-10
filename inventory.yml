@@ -1,0 +1,11 @@
+myservers:
+  vars:
+    key1: value1
+  hosts:
+    servera.lab.example.com:
+      key1: servera
+    server[b:f].lab.example.com:
+
+ungrouped:
+  hosts:
+    workstation.lab.example.com: 

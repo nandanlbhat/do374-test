@@ -1,0 +1,5 @@
+---
+- name: show value of myvar
+  debug:
+    var: myvar
+...

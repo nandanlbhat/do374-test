@@ -1,2 +1,7 @@
+workstation.lab.example.com
+
 [myservers]
 server[a:f].lab.example.com
+
+[myservers:vars]
+myvar="from inventory/hosts file"

@@ -1,0 +1,3 @@
+---
+myvar: "from group_vars/myservers/a.yml"
+...

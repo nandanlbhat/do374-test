@@ -1,0 +1,9 @@
+---
+- name: show a var
+  hosts: myservers
+  gather_facts: false
+  vars:
+    myvar: "from playbook"
+  roles:
+    - role: myrole
+...

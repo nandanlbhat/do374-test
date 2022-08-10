@@ -4,6 +4,5 @@
   gather_facts: false
   tasks:
     - name: fail with a message
-      fail:
-        msg: task failed successfully
+      fail: msg="task failed successfully"
 ...

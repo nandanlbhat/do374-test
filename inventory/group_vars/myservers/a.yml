@@ -1,0 +1,3 @@
+---
+myvar: "from inventory/group_vars/myservers/a.yml"
+...
