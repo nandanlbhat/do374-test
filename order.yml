@@ -1,0 +1,50 @@
+---
+- name: inspect task ordering
+  hosts: servera.lab.example.com
+  gather_facts: false
+
+  pre_tasks:
+    - name: this is a pre_task
+      debug:
+        msg: this is a pre_task
+      notify: pre_task_handler
+      changed_when: true
+
+  roles:
+    - name: myrole
+
+  #  - name: try importing a role
+  #    import_role:
+  #      name: myrole
+
+
+  tasks:
+    - name: this is a task
+      debug:
+        msg: this is a task
+      notify: task_handler
+      changed_when: true
+
+  post_tasks:
+    - name: this is a post_task
+      debug:
+        msg: this is a post_task
+      notify: post_task_handler
+      changed_when: true
+
+
+
+  handlers:
+    - name: pre_task_handler
+      debug:
+        msg: this is a pre_task_handler
+
+    - name: task_handler
+      debug:
+        msg: this is a task_handler
+
+    - name: post_task_handler
+      debug:
+        msg: this is a post_task_handler
+
+...

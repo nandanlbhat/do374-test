@@ -1,0 +1,27 @@
+---
+- name: show id of user running playbook
+  hosts: servera.lab.example.com
+  gather_facts: false
+#  become: false
+  tasks:
+    - block:
+      become: true    
+      - name: run id command
+        command: id
+        register: id_out_1
+        changed_when: false
+  
+      - name: show id_out variable
+        debug:
+          var: id_out_1
+  
+      - name: run id command
+        command: id
+        register: id_out_2
+        changed_when: false
+  #      become: false
+  
+      - name: show id_out variable
+        debug:
+          var: id_out_2
+...

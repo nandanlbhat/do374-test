@@ -2,4 +2,7 @@
 - name: show value of myvar
   debug:
     var: myvar
+  notify: role_handler
+  changed_when: true
 ...
+
