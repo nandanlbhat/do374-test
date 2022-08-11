@@ -1,3 +1,4 @@
 .ssh
 ansible-navigator.log
 *-artifact-*
+*tar.gz

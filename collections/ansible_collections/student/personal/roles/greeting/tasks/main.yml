@@ -1,5 +1,0 @@
----
-# tasks file for greeting
-- name: show a greeting
-  debug:
-    msg: hello world
