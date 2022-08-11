@@ -1,7 +1,7 @@
 ---
 - name: try forks
   hosts: all
-  max_fail_percentage: 0
+  max_fail_percentage: 1%
   serial:
     - 1
     - 50%
