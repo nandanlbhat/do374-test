@@ -1,0 +1,13 @@
+---
+- name: remove services from managed hosts 
+  hosts: myservers
+  become: true
+  tasks:
+    - name: remove packages
+      yum:
+        name:
+          - httpd
+          - haproxy
+          - firewalld
+        state: absent
+...        

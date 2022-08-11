@@ -1,0 +1,14 @@
+---
+- name: try forks
+  hosts: all
+  #serial: 2
+  order: sorted
+  tasks:
+    - name: task 1 sleep for 0.5 second
+      command: sleep 0.5
+      changed_when: false
+
+    - name: task 2 sleep for 0.5 second
+      command: sleep 0.5
+      changed_when: false
+...

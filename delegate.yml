@@ -1,0 +1,43 @@
+---
+- name: set up a web service
+  hosts: servera.lab.example.com
+  gather_facts: false
+  become: true
+  tasks:
+    - name: install packages
+      yum:
+        name:
+          - httpd
+          - firewalld
+        state: present
+
+    - name: put a static page
+      copy:
+        content: hello from do374 class
+        dest: /var/www/html/index.html
+        mode: 0644
+
+    - name: start services
+      service:
+        name: "{{ item }}"
+        enabled: true
+        state: started
+      loop:
+        - httpd
+        - firewalld
+
+    - name: open http port in firewall
+      ansible.posix.firewalld:
+        service: http
+        permanent: yes
+        immediate: yes
+        state: enabled
+
+    - name: check service availability
+      become: false
+      delegate_to: localhost
+      uri:  
+        url: http://{{ inventory_hostname }}
+        return_content: false
+        status_code: 200
+...        

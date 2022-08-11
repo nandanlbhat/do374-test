@@ -1,0 +1,17 @@
+---
+- name: try output of registered var
+  hosts: servera.lab.example.com
+  gather_facts: false
+  tasks:
+    - name: restart a service - chronyd
+      become: true
+      service:
+        name: chronyd
+        state: restarted
+      register: service_out
+
+    - name: output registered var
+      debug:
+        var: service_out['status']['ActiveState']
+      #when: "'fail' in service_out['state']"
+...        
