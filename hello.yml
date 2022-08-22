@@ -1,0 +1,8 @@
+---
+- name: say hello
+  hosts: servera.lab.example.com
+  tasks:
+    - name: say hello
+      debug:
+        msg: hello world
+...
